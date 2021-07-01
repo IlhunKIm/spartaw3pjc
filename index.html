@@ -109,7 +109,7 @@
 
         $.ajax({
             type: 'POST',
-            url: "api/bulletins/",
+            url: "api/bulletins",
             contentType: "application/json",
             data: JSON.stringify(data),
             success: function (response) {
@@ -123,7 +123,7 @@
     function showContents() {
         $.ajax({
             type: 'GET',
-            url: 'api/bulletins/' + localStorage.getItem("id"),
+            url: 'api/bulletins' + localStorage.getItem("id"),
             success: function (response) {
                 for (let i = 0; i < response.length; i++) {
                     let bulletin = response[i];
